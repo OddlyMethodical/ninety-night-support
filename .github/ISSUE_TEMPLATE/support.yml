@@ -1,0 +1,53 @@
+name: Support request
+description: Ask for help with Ninety Night or report an ad
+title: "[Support] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include sleep or health information, exact alarm times or dates, payment-card details, private identifiers, or sensitive screenshots. This issue is public.
+  - type: dropdown
+    id: category
+    attributes:
+      label: What do you need help with?
+      options:
+        - Alarm or Alarm access
+        - Restore Purchases or Remove Ads
+        - Advertising or report an ad
+        - Calculation or app behaviour
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Ninety Night version
+      placeholder: "For example, 1.0 (1)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model and iOS version
+      placeholder: "For example, iPhone 17 Pro, iOS 26.0"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mention whether the phone was locked, restarted, in Focus, or in Silent Mode when relevant. Do not include exact sleep choices, alarm times, dates, or private information.
